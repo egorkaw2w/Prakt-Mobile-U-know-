@@ -20,9 +20,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_marginTop="32dp"
         android:text="Сделать фото"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_iv" />
 
@@ -34,34 +35,41 @@
         android:text="Выбрать фото"
         app:layout_constraintStart_toEndOf="@id/camera_btn"
         app:layout_constraintTop_toTopOf="@id/camera_btn"
-        android:layout_marginBottom=""/>
+        app:layout_constraintBottom_toBottomOf="@id/camera_btn"/>
 
     <Button
         android:id="@+id/video_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_marginTop="32dp"
         android:text="Записать видео"
+        app:layout_constraintBottom_toBottomOf="@id/video_gallery_btn"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gallery_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/camera_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/video_gallery_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:layout_marginStart="20dp"
         android:text="Выбрать видео"
+        app:layout_constraintBottom_toBottomOf="@+id/video_btn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/video_btn" />
+        app:layout_constraintStart_toEndOf="@+id/video_btn"
+        app:layout_constraintTop_toBottomOf="@+id/gallery_btn"
+        app:layout_constraintVertical_bias="0.0" />
 
     <VideoView
         android:id="@+id/video_view"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:layout_constraintTop_toBottomOf="@+id/video_gallery_btn"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="232dp"
+        android:layout_height="174dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/video_gallery_btn" />
 </androidx.constraintlayout.widget.ConstraintLayout>
